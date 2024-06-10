@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgb(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Playball', cursive;
+    font-style: normal;
+    line-height: 50px;
+}
+
+nav {
+    padding-right: 60px;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 50px; /* Adjust this value to move the nav items right */
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    background: red;
+    display: block;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -3px;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+button {
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+button svg {
+    height: 40px;
+    width: 40px;
+}
